@@ -8,7 +8,9 @@ This is a Tampermonkey/Greasemonkey script, written primarily in JavaScript. It 
 * Gives some rudimentary details on the work page.
 * Can be configured to only work during certain times of the day.
 * Will attempt to do the main action for that page, such as digging. (WIP, unsure if I will ever come back to this project)
+
 ## HOW DO
+
 * Replace stopTime and startTime with your preferred running times. Times are based on system times.
 ```javascript
 var stopTime = 0; //Stops at midnight
