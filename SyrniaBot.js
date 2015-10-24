@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name      Syrnia Botcheck Bot
-// @namespace   Syrnia Botcheck Bot
+// @namespace   http://github.com/Makeshift
 // @author      PatchworkTiger
 // @include     http://www.syrnia.com/*
 // @version     0.7
