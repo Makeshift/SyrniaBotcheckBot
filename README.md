@@ -19,3 +19,21 @@ var startTime = 4; //Starts at 4am
 * Replace username and password with your own if you wish the auto-login to work.
 * You will need an account and credit on 2captcha.com, and you can replace the apikey variable with your captcha key from the site.
 * Simply install with Greasemonkey or Tampermonkey, then browse to the Syrnia homepage.
+
+## ADVANCED
+The bot >currently< will only run completely autonomously doing one thing at a time. You'll notice on line 226, there is
+```javascript
+locationText('work', 'fishing', 'Small fishing boat'); //Temporary until we get an array going
+```
+This will need changing to make it completely automatic for continuous days.
+* First, go to your desired AFK location.
+* Where it says your action (For example, "Dig using your spade" or "Fish with your small fishingboat"), right click on it and click "Inspect Element". It will look something like this:
+
+```html
+<a href onclick="locationText('work', 'other');return false;">Dig using your spade</a>
+```
+In this case, the interesting bit is `locationText('work', 'other');`
+Replace the line in the script with that piece of Javascript. Refresh Syrnia, and it should work fairly autonomously from then on.
+
+## TESTING
+* I have ran this script continuously with no input doing fishing for approximately 30 days. It does work, but of course, is still in beta, and there may be bugs. Please report them.
