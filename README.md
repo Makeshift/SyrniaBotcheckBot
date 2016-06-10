@@ -21,7 +21,7 @@ var startTime = 4; //Starts at 4am
 * Simply install with Greasemonkey or Tampermonkey, then browse to the Syrnia homepage.
 
 ## ADVANCED
-The bot >currently< will only run completely autonomously doing one thing at a time. You'll notice on line 226, there is
+The bot _currently_ will only run completely autonomously doing one thing at a time. You'll notice on line 221, there is
 ```javascript
 locationText('work', 'fishing', 'Small fishing boat'); //Temporary until we get an array going
 ```
