@@ -5,6 +5,8 @@
 // @include     http://www.syrnia.com/*
 // @version     0.7
 // @description      Bots the unbottable botcheck
+// @grant GM_log
+// @grant GM_xmlhttpRequest
 // ==/UserScript==
 //Configs
 //Safetimes
@@ -21,10 +23,10 @@ count = 0;
 var _MS_PER_MINUTE = 1000 * 60;
 previous = 0;
 start = "true";
-/*setInterval(function() {
+setInterval(function() {
     location.reload();
 }, 3600000); //Reload every hour to fix potential issues
-*/
+
 
 //Basically main
 setTimeout(checkBotcheck, 5000);
@@ -142,14 +144,7 @@ function submitToCaptcha(answer) {
     var locationContent = document.getElementById('LocationContent'); //get the location content
     var botButton = locationContent.getElementsByClassName('button'); //get the button itself inside location
     lastCheckDate = Date.now();
-    simulateClick(botButton[0]);
-}
-
-//Simulate a click on the continue button because of that odd protection of form submits on the captcha
-function simulateClick(node) {
-    var ev = document.createEvent("MouseEvents");
-    ev.initMouseEvent("click", true, false, self, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-    return node.dispatchEvent(ev);
+    botButton[0].click();
 }
 
 //On screen user notifications
@@ -223,7 +218,7 @@ function doMainAction() {
                     userLog("We do not automate attacks due to potential for loss!", "warning");
                 }
             } else {
-                locationText('work', 'fishing', 'Small fishing boat'); //Temporary until we get an array going
+                locationText('work', 'fishing', 'Small fishing boat'); //Change this to what you're doing!
             }
         } else if (document.getElementById("workCounter").value == 0) {
                 mainCount++;
