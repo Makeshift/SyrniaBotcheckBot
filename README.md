@@ -1,3 +1,6 @@
+##WARNING
+This script was made as my first ever Javascript project. As such, it is both bad, and broken. Right now, the feature that stops you botting at certain times does NOT work, which caused me to be banned. Oh well.
+
 # WHAT IS
 A very simple botcheck bot for the text based game, Syrnia. Developed in June 2015 as a learning experiment for JavaScript.
 ## HOW MADE
